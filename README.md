@@ -23,3 +23,6 @@ Upload: Select or drag-drop your .pptx file
 Choose Languages: Select source and target languages
 Translate: Click translate and wait for processing
 Download: Your translated presentation downloads automatically
+
+##Access
+Simply visit https://gregory4312.github.io/pptx-file-Translator to access the tool
