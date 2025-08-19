@@ -1,4 +1,4 @@
-#PowerPoint Translator
+# PowerPoint Translator
 A free, web-based tool that translates PowerPoint presentations (.pptx files) to different languages using Google Translate's free API.
 Features
 
@@ -10,14 +10,14 @@ Features
 🚀 Client-Side Processing: All processing happens in your browser - files never leave your device
 📥 Drag & Drop: Easy file upload with drag-and-drop support
 
-Supported Languages
+## Supported Languages
 
 English, Spanish, French, German, Italian, Portuguese
 Russian, Japanese, Korean, Chinese, Arabic, Hindi
 Turkish, Polish, Dutch, Swedish, Danish, Norwegian
 Finnish, Greek.
 
-How It Works
+## How It Works
 
 Upload: Select or drag-drop your .pptx file
 Choose Languages: Select source and target languages
