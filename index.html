@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerPoint Translation Tool</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>PowerPoint Translator</h1>
+            <p>Upload your presentation and translate it to any language</p>
+        </div>
+        
+        <div class="content">
+            <div class="info-section">
+                <div style="background: #e8f5e8; border: 1px solid #4caf50; border-radius: 10px; padding: 15px; margin-bottom: 20px;">
+                    <div style="color: #2e7d32; font-weight: 500; margin-bottom: 5px;">✅ Free Translation Service</div>
+                    <div style="color: #388e3c; font-size: 0.9em;">This tool uses Google Translate's free service - no API key required!</div>
+                </div>
+            </div>
+
+            <div class="upload-section">
+                <div class="file-upload" id="fileUpload" onclick="document.getElementById('fileInput').click()">
+                    <div class="upload-icon">📄</div>
+                    <div class="upload-text">Click to upload or drag and drop</div>
+                    <div class="upload-hint">Supports .pptx files</div>
+                    <input type="file" id="fileInput" class="file-input" accept=".pptx" onchange="handleFileSelect(this.files[0])">
+                </div>
+                <div class="file-info" id="fileInfo"></div>
+            </div>
+
+            <div class="language-section">
+                <div class="language-select">
+                    <label>From</label>
+                    <select id="fromLang">
+                        <option value="auto">Auto-detect</option>
+                        <option value="en">English</option>
+                        <option value="es">Spanish</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                        <option value="it">Italian</option>
+                        <option value="pt">Portuguese</option>
+                        <option value="ru">Russian</option>
+                        <option value="ja">Japanese</option>
+                        <option value="ko">Korean</option>
+                        <option value="zh">Chinese</option>
+                        <option value="ar">Arabic</option>
+                        <option value="hi">Hindi</option>
+                        <option value="tr">Turkish</option>
+                        <option value="pl">Polish</option>
+                        <option value="nl">Dutch</option>
+                        <option value="sv">Swedish</option>
+                        <option value="da">Danish</option>
+                        <option value="no">Norwegian</option>
+                        <option value="fi">Finnish</option>
+                        <option value="el">Greek</option>
+                    </select>
+                </div>
+                
+                <button class="swap-btn" id="swapBtn" onclick="swapLanguages()">⇄</button>
+                
+                <div class="language-select">
+                    <label>To</label>
+                    <select id="toLang">
+                        <option value="es">Spanish</option>
+                        <option value="en">English</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                        <option value="it">Italian</option>
+                        <option value="pt">Portuguese</option>
+                        <option value="ru">Russian</option>
+                        <option value="ja">Japanese</option>
+                        <option value="ko">Korean</option>
+                        <option value="zh">Chinese</option>
+                        <option value="ar">Arabic</option>
+                        <option value="hi">Hindi</option>
+                        <option value="tr">Turkish</option>
+                        <option value="pl">Polish</option>
+                        <option value="nl">Dutch</option>
+                        <option value="sv">Swedish</option>
+                        <option value="da">Danish</option>
+                        <option value="no">Norwegian</option>
+                        <option value="fi">Finnish</option>
+                        <option value="el">Greek</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="translate-btn" id="translateBtn" disabled onclick="startTranslation()">
+                🌍 Translate Presentation
+            </button>
+
+            <div class="progress" id="progress">
+                <div class="progress-label">
+                    <span id="progressText">Preparing...</span>
+                    <span class="progress-percentage" id="progressPercentage">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-text" id="progressDetails">Getting ready to translate your presentation</div>
+            </div>
+
+            <div class="status" id="status"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
