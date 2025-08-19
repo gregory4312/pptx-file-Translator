@@ -1,0 +1,42 @@
+{
+  "name": "powerpoint-translator",
+  "version": "1.0.0",
+  "description": "A web-based PowerPoint translation tool that translates PPTX presentations to different languages",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx live-server --port=3000",
+    "build": "echo 'Static site - no build needed'",
+    "deploy": "gh-pages -d .",
+    "predeploy": "echo 'Preparing for deployment'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gregory4312/powerpoint-translator.git"
+  },
+  "keywords": [
+    "powerpoint",
+    "translation",
+    "pptx",
+    "google-translate",
+    "web-app",
+    "javascript"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gregory4312/powerpoint-translator/issues"
+  },
+  "homepage": "https://gregory4312.github.io/powerpoint-translator/",
+  "devDependencies": {
+    "gh-pages": "^6.1.0",
+    "live-server": "^1.2.2",
+    "serve": "^14.2.1"
+  },
+  "dependencies": {},
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
